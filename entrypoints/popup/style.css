@@ -1,0 +1,26 @@
+:root { font-family: Inter, "PingFang SC", "Microsoft YaHei", system-ui, sans-serif; color: #20201e; background: #f3f0e9; font-synthesis: none; }
+* { box-sizing: border-box; }
+body { margin: 0; width: 370px; min-height: 430px; }
+button { font: inherit; }
+main { min-height: 430px; display: flex; flex-direction: column; }
+header { height: 72px; display: flex; align-items: center; gap: 11px; padding: 0 18px; border-bottom: 1px solid #d9d4ca; }
+.mark { width: 34px; height: 34px; display: grid; place-items: center; color: #fff; background: #d65332; border-radius: 3px 12px 3px 3px; font: 700 18px serif; }
+header strong, header span { display: block; }
+header strong { font-size: 16px; letter-spacing: .08em; }
+header span { color: #77736b; font-size: 11px; margin-top: 2px; }
+.icon-button { margin-left: auto; border: 0; background: transparent; padding: 8px; cursor: pointer; color: #55514a; }
+.current { padding: 28px 22px 24px; flex: 1; }
+.current.neutral > svg { color: #d65332; }
+.eyebrow { font-size: 11px; letter-spacing: .14em; color: #8a847b; }
+h1 { margin: 8px 0 10px; font-size: 27px; letter-spacing: -.04em; }
+p { color: #6b675f; line-height: 1.65; font-size: 13px; margin: 0; }
+.primary { margin-top: 28px; width: 100%; height: 44px; border: 0; border-radius: 8px; background: #22211f; color: white; display: flex; align-items: center; justify-content: center; gap: 9px; cursor: pointer; }
+.primary:hover { background: #d65332; transform: translateY(-1px); transition: .18s ease; }
+.primary:disabled { opacity: .55; }
+.platform-actions { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; margin-top: 26px; }
+.platform-actions button { background: transparent; border: 1px solid #cbc5ba; padding: 11px 12px; display: flex; justify-content: space-between; cursor: pointer; }
+.platform-actions button:hover { border-color: #d65332; color: #d65332; }
+.error { margin: 0 22px 14px; color: #9b351e; background: #f4ded6; padding: 10px 12px; border-radius: 6px; }
+footer { min-height: 49px; border-top: 1px solid #d9d4ca; padding: 0 18px; display: flex; align-items: center; gap: 8px; color: #77736b; font-size: 11px; }
+.spin { animation: spin .9s linear infinite; }
+@keyframes spin { to { transform: rotate(360deg); } }

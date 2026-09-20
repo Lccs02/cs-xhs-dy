@@ -1,0 +1,12 @@
+node_modules/
+.wxt/
+.output/
+coverage/
+playwright-report/
+test-results/
+/public/models/*
+!/public/models/README.md
+/public/wasm/
+*.log
+.env*
+!.env.example
