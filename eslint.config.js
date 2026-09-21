@@ -5,12 +5,16 @@ import reactRefresh from 'eslint-plugin-react-refresh';
 import tseslint from 'typescript-eslint';
 
 export default tseslint.config(
-  { ignores: ['.output/**', '.wxt/**', 'coverage/**', 'node_modules/**', 'public/models/**', 'public/wasm/**'] },
+  { ignores: ['.output/**', '.wxt/**', 'dist-web/**', 'coverage/**', 'node_modules/**', 'public/models/**', 'public/wasm/**'] },
   js.configs.recommended,
   ...tseslint.configs.recommended,
   {
     files: ['scripts/**/*.mjs'],
     languageOptions: { globals: { ...globals.node, fetch: 'readonly' } },
+  },
+  {
+    files: ['web/public/sw.js'],
+    languageOptions: { globals: { ...globals.serviceworker } },
   },
   {
     files: ['**/*.{ts,tsx}'],

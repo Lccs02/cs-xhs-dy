@@ -9,6 +9,9 @@
   },
   "scripts": {
     "dev": "wxt",
+    "web:dev": "vite --config vite.web.config.ts",
+    "web:build": "vite build --config vite.web.config.ts",
+    "web:preview": "vite preview --config vite.web.config.ts",
     "build": "wxt build",
     "build:enhanced": "node scripts/wxt-enhanced.mjs build",
     "build:edge": "wxt build -b edge",
@@ -21,7 +24,7 @@
     "test:e2e": "playwright test",
     "test:stress": "vitest run tests/stress",
     "audit:package": "node scripts/audit-package.mjs .output/chrome-mv3-basic .output/chrome-mv3-enhanced-0.1.0",
-    "verify": "npm run lint && npm run typecheck && npm run test && npm run build && npm run zip",
+    "verify": "npm run lint && npm run typecheck && npm run test && npm run build && npm run web:build && npm run zip",
     "prepare:model": "node scripts/prepare-model.mjs",
     "verify:model": "node scripts/verify-model.mjs",
     "postinstall": "node scripts/copy-runtime.mjs && wxt prepare"

@@ -1,9 +1,12 @@
 node_modules/
 .wxt/
 .output/
+dist-web/
 coverage/
 playwright-report/
 test-results/
+.playwright-cli/
+output/playwright/
 /public/models/*
 !/public/models/README.md
 /public/wasm/
